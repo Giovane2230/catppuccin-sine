@@ -1,0 +1,452 @@
+/* Catppuccin for Zen Browser - userContent.css */
+
+/* About pages */
+
+@-moz-document url-prefix("about:") {
+  :root {
+    /* Import colors from userChrome */
+    --in-content-page-background: var(--ctp-base, #1e1e2e) !important;
+    --in-content-page-color: var(--ctp-text, #cdd6f4) !important;
+    --in-content-box-background: var(--ctp-surface0, #313244) !important;
+    --in-content-box-border-color: var(--ctp-surface1, #45475a) !important;
+
+    /* Primary button (accent) */
+    --in-content-primary-button-background: var(
+      --ctp-accent,
+      #cba6f7
+    ) !important;
+    --in-content-primary-button-background-hover: var(
+      --ctp-accent,
+      #cba6f7
+    ) !important;
+    --in-content-primary-button-background-active: var(
+      --ctp-accent,
+      #cba6f7
+    ) !important;
+
+    /* Links */
+    --in-content-link-color: var(--ctp-accent, #cba6f7) !important;
+    --in-content-link-color-hover: var(--ctp-accent, #cba6f7) !important;
+    --in-content-link-color-active: var(--ctp-accent, #cba6f7) !important;
+    --in-content-link-color-visited: var(--ctp-mauve, #cba6f7) !important;
+
+    /* Form elements */
+    --in-content-focus-outline-color: var(--ctp-accent, #cba6f7) !important;
+    --in-content-border-color: var(--ctp-surface1, #45475a) !important;
+    --in-content-border-hover: var(--ctp-surface2, #585b70) !important;
+    --in-content-border-focus: var(--ctp-accent, #cba6f7) !important;
+
+    /* Text colors */
+    --in-content-deemphasized-text: var(--ctp-subtext0, #a6adc8) !important;
+    --in-content-text-color: var(--ctp-text, #cdd6f4) !important;
+
+    /* Buttons */
+    --in-content-button-background: var(--ctp-surface0, #313244) !important;
+    --in-content-button-background-hover: var(
+      --ctp-surface1,
+      #45475a
+    ) !important;
+    --in-content-button-background-active: var(
+      --ctp-surface2,
+      #585b70
+    ) !important;
+
+    /* Tables */
+    --in-content-table-background: var(--ctp-mantle, #181825) !important;
+    --in-content-table-border-color: var(--ctp-surface0, #313244) !important;
+    --in-content-table-header-background: var(
+      --ctp-surface0,
+      #313244
+    ) !important;
+  }
+
+  /* Page background */
+  body,
+  #mainPrefPane {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  /* Cards and boxes */
+  .card,
+  .content-box,
+  .info-box {
+    background-color: var(--ctp-surface0, #313244) !important;
+    border-color: var(--ctp-surface1, #45475a) !important;
+  }
+
+  /* Input fields */
+  input[type="text"],
+  input[type="search"],
+  input[type="number"],
+  textarea,
+  select {
+    background-color: var(--ctp-surface0, #313244) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  input[type="text"]:focus,
+  input[type="search"]:focus,
+  input[type="number"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--ctp-accent, #cba6f7) !important;
+    outline: 1px solid var(--ctp-accent, #cba6f7) !important;
+  }
+
+  /* Checkboxes and radio buttons */
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    background-color: var(--ctp-accent, #cba6f7) !important;
+    border-color: var(--ctp-accent, #cba6f7) !important;
+  }
+
+  /* Buttons */
+  button,
+  .button {
+    background-color: var(--ctp-surface0, #313244) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  button:hover,
+  .button:hover {
+    background-color: var(--ctp-surface1, #45475a) !important;
+  }
+
+  button:active,
+  .button:active {
+    background-color: var(--ctp-surface2, #585b70) !important;
+  }
+
+  /* Primary buttons */
+  button.primary,
+  .button-primary {
+    background-color: var(--ctp-accent, #cba6f7) !important;
+    color: var(--ctp-base, #1e1e2e) !important;
+    border: none !important;
+  }
+
+  /* Links */
+  a {
+    color: var(--ctp-accent, #cba6f7) !important;
+  }
+
+  a:hover {
+    color: var(--ctp-accent, #cba6f7) !important;
+    text-decoration: underline !important;
+  }
+
+  /* Search boxes */
+  #searchInput,
+  .search-box {
+    background-color: var(--ctp-surface0, #313244) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  /* Categories sidebar */
+  #categories,
+  .category {
+    background-color: var(--ctp-mantle, #181825) !important;
+  }
+
+  .category[selected],
+  .category:hover {
+    background-color: var(--ctp-surface0, #313244) !important;
+    color: var(--ctp-accent, #cba6f7) !important;
+  }
+
+  /* Tree views */
+  tree,
+  treechildren::-moz-tree-row {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  treechildren::-moz-tree-row(selected) {
+    background-color: var(--ctp-accent, #cba6f7) !important;
+    color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  treechildren::-moz-tree-row(hover) {
+    background-color: var(--ctp-surface0, #313244) !important;
+  }
+}
+
+/* about:config */
+
+@-moz-document url("about:config") {
+  body {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  #prefs {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  tr:hover {
+    background-color: var(--ctp-surface0, #313244) !important;
+  }
+
+  tr.odd {
+    background-color: var(--ctp-mantle, #181825) !important;
+  }
+
+  th {
+    background-color: var(--ctp-surface0, #313244) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  .button-edit,
+  .button-toggle,
+  .button-reset {
+    background-color: var(--ctp-surface0, #313244) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  .button-edit:hover,
+  .button-toggle:hover,
+  .button-reset:hover {
+    background-color: var(--ctp-surface1, #45475a) !important;
+  }
+}
+
+/* about:preferences */
+
+@-moz-document url("about:preferences") {
+  /* Main container */
+  #mainPrefPane {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  /* Categories sidebar */
+  #categories {
+    background-color: var(--ctp-mantle, #181825) !important;
+  }
+
+  .category {
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  .category:hover {
+    background-color: var(--ctp-surface0, #313244) !important;
+  }
+
+  .category[selected] {
+    background-color: var(--ctp-accent, #cba6f7) !important;
+    color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  /* Content area */
+  .content-box {
+    background-color: var(--ctp-surface0, #313244) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  /* Group boxes */
+  groupbox {
+    background-color: var(--ctp-surface0, #313244) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  caption {
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+}
+
+/* about:addons */
+
+@-moz-document url("about:addons") {
+  #main {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background-color: var(--ctp-mantle, #181825) !important;
+  }
+
+  .sidebar button {
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  .sidebar button:hover {
+    background-color: var(--ctp-surface0, #313244) !important;
+  }
+
+  .sidebar button[selected] {
+    background-color: var(--ctp-accent, #cba6f7) !important;
+    color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  /* Addon cards */
+  addon-card {
+    background-color: var(--ctp-surface0, #313244) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  addon-card:hover {
+    border-color: var(--ctp-surface2, #585b70) !important;
+  }
+
+  /* Search box */
+  search-addons input {
+    background-color: var(--ctp-surface0, #313244) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+}
+
+/* about:newtab & about:home */
+
+@-moz-document url("about:newtab"), url("about:home") {
+  body {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  /* Search box */
+  .search-wrapper input {
+    background-color: var(--ctp-surface0, #313244) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  .search-wrapper input:focus {
+    border-color: var(--ctp-accent, #cba6f7) !important;
+  }
+
+  /* Top sites tiles */
+  .top-site-outer {
+    background-color: var(--ctp-surface0, #313244) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  .top-site-outer:hover {
+    background-color: var(--ctp-surface1, #45475a) !important;
+  }
+
+  .top-site-outer .title {
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  /* Sections */
+  .section-top-bar {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  .section-title {
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  /* Cards */
+  .card-outer {
+    background-color: var(--ctp-surface0, #313244) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  .card-outer:hover {
+    background-color: var(--ctp-surface1, #45475a) !important;
+  }
+
+  .card-title {
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  .card-description {
+    color: var(--ctp-subtext0, #a6adc8) !important;
+  }
+}
+
+/* DevTools */
+
+@-moz-document url-prefix("about:devtools") {
+  :root {
+    --theme-body-background: var(--ctp-base, #1e1e2e) !important;
+    --theme-sidebar-background: var(--ctp-mantle, #181825) !important;
+    --theme-body-color: var(--ctp-text, #cdd6f4) !important;
+    --theme-toolbar-background: var(--ctp-surface0, #313244) !important;
+    --theme-selection-background: var(--ctp-accent, #cba6f7) !important;
+    --theme-selection-color: var(--ctp-base, #1e1e2e) !important;
+    --theme-comment: var(--ctp-overlay0, #6c7086) !important;
+  }
+}
+
+/* View source */
+
+@-moz-document url-prefix("view-source:") {
+  body {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  /* Syntax highlighting */
+  .highlight {
+    background-color: var(--ctp-yellow, #f9e2af) !important;
+    color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  /* Line numbers */
+  #line {
+    color: var(--ctp-overlay0, #6c7086) !important;
+  }
+}
+
+/* PDF viewer */
+
+@-moz-document regexp(".*\.pdf") {
+  #outerContainer {
+    background-color: var(--ctp-base, #1e1e2e) !important;
+  }
+
+  #mainContainer {
+    background-color: var(--ctp-mantle, #181825) !important;
+  }
+
+  #toolbarContainer {
+    background-color: var(--ctp-surface0, #313244) !important;
+    border-bottom: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  #secondaryToolbar {
+    background-color: var(--ctp-surface0, #313244) !important;
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  .toolbarButton {
+    background-color: transparent !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+  }
+
+  .toolbarButton:hover {
+    background-color: var(--ctp-surface1, #45475a) !important;
+  }
+
+  #pageNumber {
+    background-color: var(--ctp-surface1, #45475a) !important;
+    color: var(--ctp-text, #cdd6f4) !important;
+    border: 1px solid var(--ctp-surface2, #585b70) !important;
+  }
+
+  #thumbnailView {
+    background-color: var(--ctp-mantle, #181825) !important;
+  }
+
+  .thumbnail {
+    border: 1px solid var(--ctp-surface1, #45475a) !important;
+  }
+
+  .thumbnail.selected {
+    border-color: var(--ctp-accent, #cba6f7) !important;
+  }
+}
+
+/* Scrollbars */
+
+* {
+  scrollbar-color: var(--ctp-surface1, #45475a) var(--ctp-base, #1e1e2e) !important;
+  scrollbar-width: thin !important;
+}

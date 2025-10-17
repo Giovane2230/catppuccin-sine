@@ -1,0 +1,475 @@
+/* Catppuccin for Zen Browser - Sine Compatible
+ * https://github.com/Giovane2230/catppuccin-sine
+ */
+
+/* Base config */
+
+:root {
+  /* Default to Mocha if no preference is set */
+  --ctp-current-flavor: var(--sine-pref-flavor, "mocha");
+  --ctp-current-accent: var(--sine-pref-accentColor, "mauve");
+  --ctp-auto-switch: var(--sine-pref-autoSwitchMode, "true");
+  --ctp-transparent-tabs: var(--sine-pref-transparentTabs, "false");
+}
+
+/* Color palettes */
+
+/* Latte (light) */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Accent Colors */
+    --ctp-rosewater: #dc8a78;
+    --ctp-flamingo: #dd7878;
+    --ctp-pink: #ea76cb;
+    --ctp-mauve: #8839ef;
+    --ctp-red: #d20f39;
+    --ctp-maroon: #e64553;
+    --ctp-peach: #fe640b;
+    --ctp-yellow: #df8e1d;
+    --ctp-green: #40a02b;
+    --ctp-teal: #179299;
+    --ctp-sky: #04a5e5;
+    --ctp-sapphire: #209fb5;
+    --ctp-blue: #1e66f5;
+    --ctp-lavender: #7287fd;
+
+    /* Base Colors */
+    --ctp-text: #4c4f69;
+    --ctp-subtext1: #5c5f77;
+    --ctp-subtext0: #6c6f85;
+    --ctp-overlay2: #7c7f93;
+    --ctp-overlay1: #8c8fa1;
+    --ctp-overlay0: #9ca0b0;
+    --ctp-surface2: #acb0be;
+    --ctp-surface1: #bcc0cc;
+    --ctp-surface0: #ccd0da;
+    --ctp-base: #eff1f5;
+    --ctp-mantle: #e6e9ef;
+    --ctp-crust: #dce0e8;
+  }
+}
+
+/* Frappé */
+:root[data-ctp-flavor="frappe"] {
+  /* Accent Colors */
+  --ctp-rosewater: #f2d5cf;
+  --ctp-flamingo: #eebebe;
+  --ctp-pink: #f4b8e4;
+  --ctp-mauve: #ca9ee6;
+  --ctp-red: #e78284;
+  --ctp-maroon: #ea999c;
+  --ctp-peach: #ef9f76;
+  --ctp-yellow: #e5c890;
+  --ctp-green: #a6d189;
+  --ctp-teal: #81c8be;
+  --ctp-sky: #99d1db;
+  --ctp-sapphire: #85c1dc;
+  --ctp-blue: #8caaee;
+  --ctp-lavender: #babbf1;
+
+  /* Base Colors */
+  --ctp-text: #c6d0f5;
+  --ctp-subtext1: #b5bfe2;
+  --ctp-subtext0: #a5adce;
+  --ctp-overlay2: #949cbb;
+  --ctp-overlay1: #838ba7;
+  --ctp-overlay0: #737994;
+  --ctp-surface2: #626880;
+  --ctp-surface1: #51576d;
+  --ctp-surface0: #414559;
+  --ctp-base: #303446;
+  --ctp-mantle: #292c3c;
+  --ctp-crust: #232634;
+}
+
+/* Macchiato */
+:root[data-ctp-flavor="macchiato"] {
+  /* Accent Colors */
+  --ctp-rosewater: #f4dbd6;
+  --ctp-flamingo: #f0c6c6;
+  --ctp-pink: #f5bde6;
+  --ctp-mauve: #c6a0f6;
+  --ctp-red: #ed8796;
+  --ctp-maroon: #ee99a0;
+  --ctp-peach: #f5a97f;
+  --ctp-yellow: #eed49f;
+  --ctp-green: #a6da95;
+  --ctp-teal: #8bd5ca;
+  --ctp-sky: #91d7e3;
+  --ctp-sapphire: #7dc4e4;
+  --ctp-blue: #8aadf4;
+  --ctp-lavender: #b7bdf8;
+
+  /* Base Colors */
+  --ctp-text: #cad3f5;
+  --ctp-subtext1: #b8c0e0;
+  --ctp-subtext0: #a5adcb;
+  --ctp-overlay2: #939ab7;
+  --ctp-overlay1: #8087a2;
+  --ctp-overlay0: #6e738d;
+  --ctp-surface2: #5b6078;
+  --ctp-surface1: #494d64;
+  --ctp-surface0: #363a4f;
+  --ctp-base: #24273a;
+  --ctp-mantle: #1e2030;
+  --ctp-crust: #181926;
+}
+
+/* Mocha (default) */
+:root[data-ctp-flavor="mocha"],
+:root:not([data-ctp-flavor]) {
+  /* Accent Colors */
+  --ctp-rosewater: #f5e0dc;
+  --ctp-flamingo: #f2cdcd;
+  --ctp-pink: #f5c2e7;
+  --ctp-mauve: #cba6f7;
+  --ctp-red: #f38ba8;
+  --ctp-maroon: #eba0ac;
+  --ctp-peach: #fab387;
+  --ctp-yellow: #f9e2af;
+  --ctp-green: #a6e3a1;
+  --ctp-teal: #94e2d5;
+  --ctp-sky: #89dceb;
+  --ctp-sapphire: #74c7ec;
+  --ctp-blue: #89b4fa;
+  --ctp-lavender: #b4befe;
+
+  /* Base Colors */
+  --ctp-text: #cdd6f4;
+  --ctp-subtext1: #bac2de;
+  --ctp-subtext0: #a6adc8;
+  --ctp-overlay2: #9399b2;
+  --ctp-overlay1: #7f849c;
+  --ctp-overlay0: #6c7086;
+  --ctp-surface2: #585b70;
+  --ctp-surface1: #45475a;
+  --ctp-surface0: #313244;
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-crust: #11111b;
+}
+
+/* Accent colors */
+
+:root[data-ctp-accent="rosewater"] {
+  --ctp-accent: var(--ctp-rosewater);
+}
+:root[data-ctp-accent="flamingo"] {
+  --ctp-accent: var(--ctp-flamingo);
+}
+:root[data-ctp-accent="pink"] {
+  --ctp-accent: var(--ctp-pink);
+}
+:root[data-ctp-accent="mauve"] {
+  --ctp-accent: var(--ctp-mauve);
+}
+:root[data-ctp-accent="red"] {
+  --ctp-accent: var(--ctp-red);
+}
+:root[data-ctp-accent="maroon"] {
+  --ctp-accent: var(--ctp-maroon);
+}
+:root[data-ctp-accent="peach"] {
+  --ctp-accent: var(--ctp-peach);
+}
+:root[data-ctp-accent="yellow"] {
+  --ctp-accent: var(--ctp-yellow);
+}
+:root[data-ctp-accent="green"] {
+  --ctp-accent: var(--ctp-green);
+}
+:root[data-ctp-accent="teal"] {
+  --ctp-accent: var(--ctp-teal);
+}
+:root[data-ctp-accent="sky"] {
+  --ctp-accent: var(--ctp-sky);
+}
+:root[data-ctp-accent="sapphire"] {
+  --ctp-accent: var(--ctp-sapphire);
+}
+:root[data-ctp-accent="blue"] {
+  --ctp-accent: var(--ctp-blue);
+}
+:root[data-ctp-accent="lavender"] {
+  --ctp-accent: var(--ctp-lavender);
+}
+
+/* Default to mauve if no accent is set */
+:root:not([data-ctp-accent]) {
+  --ctp-accent: var(--ctp-mauve);
+}
+
+/* Theme application */
+
+/* Window & background */
+:root {
+  /* Main backgrounds */
+  --zen-primary-color: var(--ctp-base) !important;
+  --zen-secondary-color: var(--ctp-mantle) !important;
+  --zen-dialog-background: var(--ctp-crust) !important;
+
+  /* Sidebar & panels */
+  --zen-sidebar-background: var(--ctp-mantle) !important;
+  --zen-panel-background: var(--ctp-surface0) !important;
+
+  /* Text colors */
+  --zen-primary-text-color: var(--ctp-text) !important;
+  --zen-secondary-text-color: var(--ctp-subtext0) !important;
+  --zen-disabled-text-color: var(--ctp-overlay0) !important;
+
+  /* Accent colors */
+  --zen-accent-color: var(--ctp-accent) !important;
+  --zen-accent-hover: var(--ctp-accent) !important;
+  --zen-accent-active: var(--ctp-accent) !important;
+}
+
+/* Toolbar */
+#navigator-toolbox {
+  background-color: var(--ctp-base) !important;
+  border-bottom: 1px solid var(--ctp-surface0) !important;
+}
+
+#nav-bar {
+  background: var(--ctp-base) !important;
+  border: none !important;
+}
+
+/* Toolbar buttons */
+.toolbarbutton-1,
+toolbarbutton {
+  fill: var(--ctp-text) !important;
+  color: var(--ctp-text) !important;
+}
+
+.toolbarbutton-1:hover,
+toolbarbutton:hover {
+  background-color: var(--ctp-surface0) !important;
+  fill: var(--ctp-accent) !important;
+  color: var(--ctp-accent) !important;
+}
+
+.toolbarbutton-1:active,
+toolbarbutton:active {
+  background-color: var(--ctp-surface1) !important;
+}
+
+/* URL bar */
+#urlbar,
+#urlbar-background,
+#searchbar {
+  background: var(--ctp-surface0) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+#urlbar:focus-within,
+#searchbar:focus-within {
+  border-color: var(--ctp-accent) !important;
+  box-shadow: 0 0 0 1px var(--ctp-accent) !important;
+}
+
+/* URL bar text */
+#urlbar-input,
+#searchbar input {
+  color: var(--ctp-text) !important;
+}
+
+/* URL bar results dropdown */
+#urlbar-results,
+.urlbarView {
+  background: var(--ctp-surface0) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+  color: var(--ctp-text) !important;
+}
+
+.urlbarView-row:hover {
+  background: var(--ctp-surface1) !important;
+}
+
+.urlbarView-row[selected] {
+  background: var(--ctp-accent) !important;
+  color: var(--ctp-base) !important;
+}
+
+/* Tabs */
+.tabbrowser-tab {
+  color: var(--ctp-subtext0) !important;
+}
+
+/* Tab background */
+.tab-background {
+  background: var(--ctp-mantle) !important;
+  border: 1px solid var(--ctp-surface0) !important;
+}
+
+/* Active tab */
+.tabbrowser-tab[selected] .tab-background {
+  background: var(--ctp-surface0) !important;
+  border-bottom-color: var(--ctp-accent) !important;
+}
+
+.tabbrowser-tab[selected] {
+  color: var(--ctp-text) !important;
+}
+
+/* Tab hover */
+.tabbrowser-tab:hover:not([selected]) .tab-background {
+  background: var(--ctp-surface0) !important;
+}
+
+/* Tab close button */
+.tab-close-button {
+  fill: var(--ctp-overlay1) !important;
+}
+
+.tab-close-button:hover {
+  background-color: var(--ctp-red) !important;
+  fill: var(--ctp-base) !important;
+  border-radius: 3px;
+}
+
+/* New tab button */
+#tabs-newtab-button,
+#new-tab-button {
+  fill: var(--ctp-accent) !important;
+}
+
+#tabs-newtab-button:hover,
+#new-tab-button:hover {
+  background-color: var(--ctp-surface0) !important;
+}
+
+/* Transparent tabs option */
+:root[data-ctp-transparent="true"] .tab-background {
+  background: transparent !important;
+}
+
+/* Sidebar */
+#sidebar-box,
+#sidebar-header {
+  background-color: var(--ctp-mantle) !important;
+  color: var(--ctp-text) !important;
+}
+
+#sidebar-switcher-target {
+  background-color: var(--ctp-surface0) !important;
+}
+
+.sidebar-panel {
+  background: var(--ctp-mantle) !important;
+}
+
+/* Menus & popups */
+menupopup,
+popup,
+panel {
+  --panel-background: var(--ctp-surface0) !important;
+  --panel-color: var(--ctp-text) !important;
+  --panel-border-color: var(--ctp-surface1) !important;
+  background: var(--ctp-surface0) !important;
+  color: var(--ctp-text) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+}
+
+menuitem,
+menu {
+  color: var(--ctp-text) !important;
+}
+
+menuitem:hover,
+menu:hover,
+menuitem[_moz-menuactive="true"],
+menu[_moz-menuactive="true"] {
+  background-color: var(--ctp-surface1) !important;
+  color: var(--ctp-accent) !important;
+}
+
+menuseparator {
+  border-top-color: var(--ctp-surface1) !important;
+}
+
+/* Scrollbars */
+scrollbar {
+  background-color: var(--ctp-base) !important;
+}
+
+scrollbar thumb {
+  background-color: var(--ctp-surface1) !important;
+  border-radius: 5px;
+}
+
+scrollbar thumb:hover {
+  background-color: var(--ctp-surface2) !important;
+}
+
+/* Findbar */
+.findbar-textbox {
+  background-color: var(--ctp-surface0) !important;
+  color: var(--ctp-text) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+}
+
+.findbar-find-status {
+  color: var(--ctp-subtext0) !important;
+}
+
+/* Bookmarks */
+#PersonalToolbar {
+  background-color: var(--ctp-base) !important;
+}
+
+.bookmark-item {
+  color: var(--ctp-text) !important;
+}
+
+.bookmark-item:hover {
+  background-color: var(--ctp-surface0) !important;
+  color: var(--ctp-accent) !important;
+}
+
+/* Status & notifications */
+#statuspanel-label {
+  background-color: var(--ctp-surface0) !important;
+  color: var(--ctp-text) !important;
+  border: 1px solid var(--ctp-surface1) !important;
+}
+
+notification,
+.notificationbox-stack {
+  background-color: var(--ctp-surface0) !important;
+  color: var(--ctp-text) !important;
+}
+
+/* DevTools */
+#developer-toolbar {
+  background-color: var(--ctp-base) !important;
+  border-top: 1px solid var(--ctp-surface0) !important;
+}
+
+/* Zen-specific features */
+
+/* Compact mode */
+:root[zen-compact="true"] {
+  --tab-min-height: 32px !important;
+}
+
+/* Split view */
+#zen-split-view-container {
+  background: var(--ctp-base) !important;
+}
+
+/* Workspaces */
+.zen-workspace-button {
+  background: var(--ctp-surface0) !important;
+  color: var(--ctp-text) !important;
+}
+
+.zen-workspace-button:hover {
+  background: var(--ctp-surface1) !important;
+  color: var(--ctp-accent) !important;
+}
+
+.zen-workspace-button[selected] {
+  background: var(--ctp-accent) !important;
+  color: var(--ctp-base) !important;
+}

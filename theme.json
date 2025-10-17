@@ -1,0 +1,111 @@
+{
+  "name": "Catppuccin for Zen Browser",
+  "description": "😼 Soothing pastel theme for Zen Browser with Sine!",
+  "version": "1.0.0",
+  "author": "Giovane2230",
+  "homepage": "https://github.com/Giovane2230/catppuccin-sine",
+  "repository": "Giovane2230/catppuccin-zen-sine",
+  "license": "MIT",
+  "preferences": {
+    "flavor": {
+      "type": "select",
+      "label": "Flavor",
+      "description": "Choose your flavor",
+      "options": [
+        {
+          "value": "latte",
+          "label": "🌻 Latte (Light)"
+        },
+        {
+          "value": "frappe",
+          "label": "🪴 Frappé (Dark)"
+        },
+        {
+          "value": "macchiato",
+          "label": "🌺 Macchiato (Dark)"
+        },
+        {
+          "value": "mocha",
+          "label": "🌿 Mocha (Dark)"
+        }
+      ],
+      "default": "mocha"
+    },
+    "accentColor": {
+      "type": "select",
+      "label": "Accent Color",
+      "description": "Choose your favorite accent color",
+      "options": [
+        {
+          "value": "rosewater",
+          "label": "🌸 Rosewater"
+        },
+        {
+          "value": "flamingo",
+          "label": "🦩 Flamingo"
+        },
+        {
+          "value": "pink",
+          "label": "💖 Pink"
+        },
+        {
+          "value": "mauve",
+          "label": "💜 Mauve (Default)"
+        },
+        {
+          "value": "red",
+          "label": "❤️ Red"
+        },
+        {
+          "value": "maroon",
+          "label": "🍷 Maroon"
+        },
+        {
+          "value": "peach",
+          "label": "🍑 Peach"
+        },
+        {
+          "value": "yellow",
+          "label": "💛 Yellow"
+        },
+        {
+          "value": "green",
+          "label": "💚 Green"
+        },
+        {
+          "value": "teal",
+          "label": "🩵 Teal"
+        },
+        {
+          "value": "sky",
+          "label": "🌤️ Sky"
+        },
+        {
+          "value": "sapphire",
+          "label": "💎 Sapphire"
+        },
+        {
+          "value": "blue",
+          "label": "💙 Blue"
+        },
+        {
+          "value": "lavender",
+          "label": "🪻 Lavender"
+        }
+      ],
+      "default": "mauve"
+    },
+    "autoSwitchMode": {
+      "type": "boolean",
+      "label": "Auto-switch with System Theme",
+      "description": "Automatically use Latte in light mode and your selected dark flavor in dark mode",
+      "default": true
+    },
+    "transparentTabs": {
+      "type": "boolean",
+      "label": "Transparent Tabs",
+      "description": "Enable transparency effects on tabs (requires browser.tabs.allow_transparent_browser = true in about:config)",
+      "default": false
+    }
+  }
+}

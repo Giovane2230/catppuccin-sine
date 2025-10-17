@@ -1,0 +1,73 @@
+[
+  {
+    "type": "text",
+    "label": "😼 Catppuccin Settings",
+    "margin": "30px 0 30px 0",
+    "size": "20px"
+  },
+  {
+    "type": "separator",
+    "label": "🎨 Theme Flavor",
+    "margin": "15px 0 15px 0"
+  },
+  {
+    "type": "dropdown",
+    "property": "ctp-flavor",
+    "label": "Color Palette",
+    "value": "string",
+    "default": "mocha",
+    "placeholder": false,
+    "options": [
+      { "label": "🌻 Latte (Light)", "value": "latte" },
+      { "label": "🪴 Frappé (Dark)", "value": "frappe" },
+      { "label": "🌺 Macchiato (Dark)", "value": "macchiato" },
+      { "label": "🌿 Mocha (Dark)", "value": "mocha" }
+    ]
+  },
+  {
+    "type": "separator",
+    "label": "💜 Accent Color",
+    "margin": "15px 0 15px 0"
+  },
+  {
+    "type": "dropdown",
+    "property": "ctp-accent",
+    "label": "Accent Color",
+    "value": "string",
+    "default": "mauve",
+    "placeholder": false,
+    "options": [
+      { "label": "🌸 Rosewater", "value": "rosewater" },
+      { "label": "🦩 Flamingo", "value": "flamingo" },
+      { "label": "💖 Pink", "value": "pink" },
+      { "label": "💜 Mauve", "value": "mauve" },
+      { "label": "❤️ Red", "value": "red" },
+      { "label": "🍷 Maroon", "value": "maroon" },
+      { "label": "🍑 Peach", "value": "peach" },
+      { "label": "💛 Yellow", "value": "yellow" },
+      { "label": "💚 Green", "value": "green" },
+      { "label": "🩵 Teal", "value": "teal" },
+      { "label": "🌤️ Sky", "value": "sky" },
+      { "label": "💎 Sapphire", "value": "sapphire" },
+      { "label": "💙 Blue", "value": "blue" },
+      { "label": "🪻 Lavender", "value": "lavender" }
+    ]
+  },
+  {
+    "type": "separator",
+    "label": "⚙️ Theme Options",
+    "margin": "15px 0 15px 0"
+  },
+  {
+    "type": "checkbox",
+    "property": "ctp-transparent-tabs",
+    "label": "Enable transparent tabs",
+    "margin": "12px 0"
+  },
+  {
+    "type": "checkbox",
+    "property": "ctp-auto-switch",
+    "label": "Auto-switch flavor with system theme (Latte for light, your chosen flavor for dark)",
+    "margin": "12px 0"
+  }
+]
